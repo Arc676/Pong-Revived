@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -476,10 +477,10 @@
         <window title="Pong Revived" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="576" y="287" width="184" height="317"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="184" height="317"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="536">
                         <rect key="frame" x="14" y="280" width="159" height="32"/>
@@ -535,7 +536,7 @@
                     </button>
                     <box autoresizesSubviews="NO" title="Game Type" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="1174">
                         <rect key="frame" x="13" y="124" width="157" height="116"/>
-                        <view key="contentView">
+                        <view key="contentView" id="rPJ-pW-euP">
                             <rect key="frame" x="1" y="1" width="155" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -571,10 +572,10 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1183" secondAttribute="trailing" constant="16" id="Afh-KA-U1g"/>
-                            <constraint firstItem="1183" firstAttribute="top" secondItem="1174" secondAttribute="top" constant="24" id="LTr-Uf-lpS"/>
-                            <constraint firstAttribute="bottom" secondItem="1183" secondAttribute="bottom" constant="12" id="NT1-We-XV4"/>
-                            <constraint firstItem="1183" firstAttribute="leading" secondItem="1174" secondAttribute="leading" constant="16" id="aOv-xz-nCY"/>
+                            <constraint firstItem="1183" firstAttribute="leading" secondItem="1174" secondAttribute="leading" constant="16" id="6Lj-ua-mB0"/>
+                            <constraint firstAttribute="trailing" secondItem="1183" secondAttribute="trailing" constant="16" id="RNj-Y0-bjb"/>
+                            <constraint firstItem="1183" firstAttribute="top" secondItem="1174" secondAttribute="top" constant="24" id="Zoi-fg-xZh"/>
+                            <constraint firstAttribute="bottom" secondItem="1183" secondAttribute="bottom" constant="12" id="yHQ-Yw-LQt"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -631,14 +632,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" nonactivatingPanel="YES"/>
             <windowCollectionBehavior key="collectionBehavior" moveToActiveSpace="YES" managed="YES" ignoresCycle="YES"/>
             <rect key="contentRect" x="120" y="65" width="519" height="386"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <value key="minSize" type="size" width="519" height="386"/>
             <value key="maxSize" type="size" width="519" height="386"/>
             <view key="contentView" id="993">
                 <rect key="frame" x="0.0" y="0.0" width="519" height="386"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1019">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="1019">
                         <rect key="frame" x="18" y="273" width="240" height="68"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The left player (on Player vs Player and Player vs AI modes) is controlled with W and S to move up and down respectively" id="1020">
                             <font key="font" metaFont="system"/>
@@ -646,7 +647,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1025">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="1025">
                         <rect key="frame" x="18" y="197" width="240" height="68"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The right player (on Player vs Player mode) is controlled with the up and down arrow keys to move up and down respectively" id="1026">
                             <font key="font" metaFont="system"/>
@@ -654,7 +655,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1052">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="208" translatesAutoresizingMaskIntoConstraints="NO" id="1052">
                         <rect key="frame" x="18" y="65" width="212" height="17"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Press [ to pause and ] to unpause" id="1053">
                             <font key="font" metaFont="system"/>
@@ -673,7 +674,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3274">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="3274">
                         <rect key="frame" x="18" y="138" width="230" height="51"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Press \ to activate debug mode. Debug mode shows information on all game components" id="3275">
                             <font key="font" metaFont="system"/>
@@ -681,7 +682,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3597">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="179" translatesAutoresizingMaskIntoConstraints="NO" id="3597">
                         <rect key="frame" x="18" y="113" width="183" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="hoP-mw-ad3"/>
@@ -692,7 +693,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5395">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="5395">
                         <rect key="frame" x="261" y="273" width="240" height="68"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="&quot;Updates per 1/60 Second&quot; indicates how many times the entity gets updated every 1/60 of a second (not speed)" id="5409">
                             <font key="font" metaFont="system"/>
@@ -700,7 +701,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5396">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="5396">
                         <rect key="frame" x="262" y="138" width="240" height="51"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="&quot;Chance of the Ball Randomly Changing Direction After Bouncing Off a Paddle&quot; indicates just that" id="5408">
                             <font key="font" metaFont="system"/>
@@ -708,7 +709,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5397">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="5397">
                         <rect key="frame" x="262" y="20" width="240" height="68"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The &quot;Cheats&quot; option allows game-manipulating commands to be used in-game. Entering the command &quot;help&quot; shows a list of commands" id="5407">
                             <font key="font" metaFont="system"/>
@@ -716,7 +717,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5398">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="5398">
                         <rect key="frame" x="261" y="79" width="240" height="51"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The buttons in the &quot;Randomize&quot; panel randomize game component colors" id="5406">
                             <font key="font" metaFont="system"/>
@@ -724,7 +725,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5401">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="5401">
                         <rect key="frame" x="262" y="197" width="240" height="70"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The &quot;Randomize&quot; button in the Updates box sets the update frequency of each component to a random value from 1 to 5" id="5403">
                             <font key="font" metaFont="system"/>
@@ -820,14 +821,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="138" width="310" height="175"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="1238">
                 <rect key="frame" x="0.0" y="0.0" width="310" height="175"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" title="Color Settings" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="2799">
                         <rect key="frame" x="17" y="17" width="276" height="150"/>
-                        <view key="contentView">
+                        <view key="contentView" id="KZ7-SL-T2g">
                             <rect key="frame" x="1" y="1" width="274" height="134"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -974,39 +975,39 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="2817" firstAttribute="leading" secondItem="2799" secondAttribute="leading" constant="19" id="2819"/>
-                            <constraint firstItem="2821" firstAttribute="leading" secondItem="2833" secondAttribute="leading" id="2888"/>
-                            <constraint firstItem="2821" firstAttribute="leading" secondItem="2817" secondAttribute="leading" id="2889"/>
-                            <constraint firstItem="2891" firstAttribute="leading" secondItem="2833" secondAttribute="leading" id="2899"/>
-                            <constraint firstItem="2904" firstAttribute="centerY" secondItem="2817" secondAttribute="centerY" id="2907"/>
-                            <constraint firstItem="2910" firstAttribute="leading" secondItem="2904" secondAttribute="leading" id="2916"/>
-                            <constraint firstItem="2917" firstAttribute="leading" secondItem="2910" secondAttribute="leading" id="2921"/>
-                            <constraint firstItem="2923" firstAttribute="leading" secondItem="2917" secondAttribute="leading" id="2927"/>
-                            <constraint firstItem="2821" firstAttribute="top" secondItem="2817" secondAttribute="bottom" constant="8" symbolic="YES" id="3026"/>
-                            <constraint firstItem="3056" firstAttribute="bottom" secondItem="2891" secondAttribute="bottom" id="3231"/>
-                            <constraint firstItem="3056" firstAttribute="top" secondItem="2923" secondAttribute="top" id="3232"/>
-                            <constraint firstItem="3050" firstAttribute="top" secondItem="2917" secondAttribute="top" id="3235"/>
-                            <constraint firstItem="3050" firstAttribute="bottom" secondItem="2833" secondAttribute="bottom" id="3236"/>
-                            <constraint firstItem="2910" firstAttribute="top" secondItem="3041" secondAttribute="top" id="3237"/>
-                            <constraint firstItem="3041" firstAttribute="bottom" secondItem="2821" secondAttribute="bottom" id="3238"/>
-                            <constraint firstItem="2904" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="20" id="3249"/>
-                            <constraint firstItem="2975" firstAttribute="top" secondItem="2904" secondAttribute="top" id="3253"/>
-                            <constraint firstItem="2917" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="68" id="4938"/>
-                            <constraint firstItem="4987" firstAttribute="centerX" secondItem="2799" secondAttribute="centerX" id="4994"/>
-                            <constraint firstItem="4987" firstAttribute="top" secondItem="2891" secondAttribute="bottom" constant="8" symbolic="YES" id="4995"/>
-                            <constraint firstAttribute="bottom" secondItem="4987" secondAttribute="bottom" constant="4" id="4996"/>
-                            <constraint firstItem="2923" firstAttribute="leading" secondItem="2891" secondAttribute="trailing" constant="8" symbolic="YES" id="5188"/>
-                            <constraint firstItem="2917" firstAttribute="leading" secondItem="2833" secondAttribute="trailing" constant="8" symbolic="YES" id="5189"/>
-                            <constraint firstItem="2904" firstAttribute="leading" secondItem="2817" secondAttribute="trailing" constant="8" symbolic="YES" id="5190"/>
-                            <constraint firstItem="2910" firstAttribute="leading" secondItem="2821" secondAttribute="trailing" constant="8" symbolic="YES" id="5191"/>
-                            <constraint firstItem="2917" firstAttribute="trailing" secondItem="2923" secondAttribute="trailing" id="5249"/>
-                            <constraint firstItem="2910" firstAttribute="trailing" secondItem="2917" secondAttribute="trailing" id="5252"/>
-                            <constraint firstItem="2910" firstAttribute="trailing" secondItem="2904" secondAttribute="trailing" id="5253"/>
-                            <constraint firstItem="3041" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="44" id="5569"/>
-                            <constraint firstAttribute="trailing" secondItem="3041" secondAttribute="trailing" constant="16" id="5574"/>
-                            <constraint firstAttribute="trailing" secondItem="3056" secondAttribute="trailing" constant="16" id="5575"/>
-                            <constraint firstAttribute="trailing" secondItem="2975" secondAttribute="trailing" constant="16" id="5576"/>
-                            <constraint firstAttribute="trailing" secondItem="3050" secondAttribute="trailing" constant="16" id="5577"/>
+                            <constraint firstItem="4987" firstAttribute="centerX" secondItem="2799" secondAttribute="centerX" id="0Kp-Gm-09w"/>
+                            <constraint firstItem="2817" firstAttribute="leading" secondItem="2799" secondAttribute="leading" constant="19" id="0je-kI-rSM"/>
+                            <constraint firstAttribute="trailing" secondItem="3050" secondAttribute="trailing" constant="16" id="3gL-nz-eU0"/>
+                            <constraint firstAttribute="trailing" secondItem="3041" secondAttribute="trailing" constant="16" id="7kC-JM-i3J"/>
+                            <constraint firstItem="3056" firstAttribute="top" secondItem="2923" secondAttribute="top" id="Bwg-yg-SKR"/>
+                            <constraint firstItem="2891" firstAttribute="leading" secondItem="2833" secondAttribute="leading" id="Dh8-Ok-JDH"/>
+                            <constraint firstItem="2904" firstAttribute="centerY" secondItem="2817" secondAttribute="centerY" id="DuM-Ow-793"/>
+                            <constraint firstItem="2917" firstAttribute="leading" secondItem="2910" secondAttribute="leading" id="EAJ-1I-tCY"/>
+                            <constraint firstItem="2923" firstAttribute="leading" secondItem="2917" secondAttribute="leading" id="Ez1-qa-l3a"/>
+                            <constraint firstItem="3050" firstAttribute="bottom" secondItem="2833" secondAttribute="bottom" id="FSI-hd-sZs"/>
+                            <constraint firstItem="2904" firstAttribute="leading" secondItem="2817" secondAttribute="trailing" constant="8" symbolic="YES" id="I9b-Vf-wib"/>
+                            <constraint firstItem="2910" firstAttribute="trailing" secondItem="2917" secondAttribute="trailing" id="Ix2-zA-ujl"/>
+                            <constraint firstItem="3041" firstAttribute="bottom" secondItem="2821" secondAttribute="bottom" id="PeD-fg-RZH"/>
+                            <constraint firstItem="2917" firstAttribute="leading" secondItem="2833" secondAttribute="trailing" constant="8" symbolic="YES" id="U6Z-KX-hmc"/>
+                            <constraint firstItem="2904" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="20" id="VMF-kX-q7D"/>
+                            <constraint firstItem="3050" firstAttribute="top" secondItem="2917" secondAttribute="top" id="Vpj-EU-r6D"/>
+                            <constraint firstItem="2910" firstAttribute="trailing" secondItem="2904" secondAttribute="trailing" id="Vya-VH-qwU"/>
+                            <constraint firstItem="2917" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="68" id="XTt-Dx-LI3"/>
+                            <constraint firstItem="2917" firstAttribute="trailing" secondItem="2923" secondAttribute="trailing" id="ZbC-KC-FSQ"/>
+                            <constraint firstItem="3041" firstAttribute="top" secondItem="2799" secondAttribute="top" constant="44" id="bNT-Bi-yS0"/>
+                            <constraint firstItem="2910" firstAttribute="top" secondItem="3041" secondAttribute="top" id="e78-We-UwO"/>
+                            <constraint firstItem="2821" firstAttribute="top" secondItem="2817" secondAttribute="bottom" constant="8" symbolic="YES" id="eF5-Wh-r4w"/>
+                            <constraint firstItem="2821" firstAttribute="leading" secondItem="2817" secondAttribute="leading" id="gLs-wk-Fqq"/>
+                            <constraint firstAttribute="trailing" secondItem="3056" secondAttribute="trailing" constant="16" id="gaU-I1-AJF"/>
+                            <constraint firstItem="2975" firstAttribute="top" secondItem="2904" secondAttribute="top" id="gfY-9P-GZd"/>
+                            <constraint firstItem="3056" firstAttribute="bottom" secondItem="2891" secondAttribute="bottom" id="iI3-Xp-XwQ"/>
+                            <constraint firstAttribute="trailing" secondItem="2975" secondAttribute="trailing" constant="16" id="iWx-F7-eZ0"/>
+                            <constraint firstItem="2910" firstAttribute="leading" secondItem="2821" secondAttribute="trailing" constant="8" symbolic="YES" id="lZl-gS-cO9"/>
+                            <constraint firstItem="2821" firstAttribute="leading" secondItem="2833" secondAttribute="leading" id="si9-tV-qIz"/>
+                            <constraint firstAttribute="bottom" secondItem="4987" secondAttribute="bottom" constant="4" id="tGW-zh-HZa"/>
+                            <constraint firstItem="2923" firstAttribute="leading" secondItem="2891" secondAttribute="trailing" constant="8" symbolic="YES" id="tSi-1M-Tti"/>
+                            <constraint firstItem="2910" firstAttribute="leading" secondItem="2904" secondAttribute="leading" id="uYF-9d-AEc"/>
+                            <constraint firstItem="4987" firstAttribute="top" secondItem="2891" secondAttribute="bottom" constant="8" symbolic="YES" id="ybW-Qu-vSO"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1024,7 +1025,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="138" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="2244">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1036,7 +1037,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" spellingCorrection="YES" id="4216" customClass="Logger">
-                                    <rect key="frame" x="0.0" y="0.0" width="493" height="269"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="478" height="269"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="478" height="269"/>
@@ -1070,7 +1071,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="120" y="65" width="393" height="557"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="3404">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="557"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1346,14 +1347,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="132" width="480" height="187"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="4227">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="187"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" title="Chance of the Ball Randomly Changing Direction After Hitting a Paddle" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="2021">
                         <rect key="frame" x="17" y="120" width="446" height="47"/>
-                        <view key="contentView">
+                        <view key="contentView" id="QeL-Ev-SFK">
                             <rect key="frame" x="1" y="1" width="444" height="31"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -1406,21 +1407,21 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="2105" firstAttribute="leading" secondItem="2021" secondAttribute="leading" constant="16" id="2111"/>
-                            <constraint firstItem="2113" firstAttribute="baseline" secondItem="2105" secondAttribute="baseline" id="2221"/>
-                            <constraint firstAttribute="trailing" secondItem="2228" secondAttribute="trailing" constant="16" id="2231"/>
-                            <constraint firstItem="2228" firstAttribute="top" secondItem="2112" secondAttribute="top" id="2233"/>
-                            <constraint firstItem="2112" firstAttribute="top" secondItem="2021" secondAttribute="top" constant="18" id="2726"/>
-                            <constraint firstItem="2113" firstAttribute="centerY" secondItem="2112" secondAttribute="centerY" id="4031"/>
-                            <constraint firstAttribute="trailing" secondItem="2112" secondAttribute="trailing" constant="117" id="4037"/>
-                            <constraint firstAttribute="trailing" secondItem="2113" secondAttribute="trailing" constant="81" id="4046"/>
+                            <constraint firstItem="2113" firstAttribute="centerY" secondItem="2112" secondAttribute="centerY" id="6UG-JP-Ojx"/>
+                            <constraint firstItem="2105" firstAttribute="leading" secondItem="2021" secondAttribute="leading" constant="16" id="Ae5-Dl-YUb"/>
+                            <constraint firstAttribute="trailing" secondItem="2112" secondAttribute="trailing" constant="117" id="Aj9-DI-JOO"/>
+                            <constraint firstItem="2228" firstAttribute="top" secondItem="2112" secondAttribute="top" id="K5s-yR-yeo"/>
+                            <constraint firstAttribute="trailing" secondItem="2228" secondAttribute="trailing" constant="16" id="PAF-8O-2AO"/>
+                            <constraint firstItem="2113" firstAttribute="baseline" secondItem="2105" secondAttribute="baseline" id="UL4-uq-MJa"/>
+                            <constraint firstItem="2112" firstAttribute="top" secondItem="2021" secondAttribute="top" constant="18" id="VXF-uh-QGo"/>
+                            <constraint firstAttribute="trailing" secondItem="2113" secondAttribute="trailing" constant="81" id="bAh-H0-EHA"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <box autoresizesSubviews="NO" title="Sounds" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="3865">
                         <rect key="frame" x="17" y="53" width="446" height="63"/>
-                        <view key="contentView">
+                        <view key="contentView" id="OdS-wP-Lck">
                             <rect key="frame" x="1" y="1" width="444" height="47"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -1514,18 +1515,18 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="4159" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="16" id="4161"/>
-                            <constraint firstItem="4159" firstAttribute="centerY" secondItem="4058" secondAttribute="centerY" id="4162"/>
-                            <constraint firstItem="4058" firstAttribute="leading" secondItem="4159" secondAttribute="trailing" constant="8" symbolic="YES" id="4163"/>
-                            <constraint firstItem="4164" firstAttribute="baseline" secondItem="4159" secondAttribute="baseline" id="4167"/>
-                            <constraint firstItem="4164" firstAttribute="baseline" secondItem="4074" secondAttribute="baseline" id="4169"/>
-                            <constraint firstAttribute="bottom" secondItem="4074" secondAttribute="bottom" constant="11" id="4171"/>
-                            <constraint firstItem="4173" firstAttribute="baseline" secondItem="4127" secondAttribute="baseline" id="4177"/>
-                            <constraint firstAttribute="bottom" secondItem="4127" secondAttribute="bottom" constant="11" id="4179"/>
-                            <constraint firstAttribute="trailing" secondItem="4127" secondAttribute="trailing" constant="16" id="4304"/>
-                            <constraint firstAttribute="trailing" secondItem="4173" secondAttribute="trailing" constant="91" id="4305"/>
-                            <constraint firstItem="4074" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="205" id="4306"/>
-                            <constraint firstItem="4164" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="156" id="4307"/>
+                            <constraint firstItem="4164" firstAttribute="baseline" secondItem="4159" secondAttribute="baseline" id="2yp-e7-gYw"/>
+                            <constraint firstItem="4164" firstAttribute="baseline" secondItem="4074" secondAttribute="baseline" id="5wh-Uy-Onc"/>
+                            <constraint firstAttribute="bottom" secondItem="4074" secondAttribute="bottom" constant="11" id="IOR-mQ-3tw"/>
+                            <constraint firstAttribute="bottom" secondItem="4127" secondAttribute="bottom" constant="11" id="R4K-3f-726"/>
+                            <constraint firstItem="4159" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="16" id="UFK-jj-QH3"/>
+                            <constraint firstItem="4173" firstAttribute="baseline" secondItem="4127" secondAttribute="baseline" id="g6k-9C-lnh"/>
+                            <constraint firstAttribute="trailing" secondItem="4127" secondAttribute="trailing" constant="16" id="j3j-cB-X6H"/>
+                            <constraint firstItem="4159" firstAttribute="centerY" secondItem="4058" secondAttribute="centerY" id="nMN-3O-xab"/>
+                            <constraint firstItem="4164" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="156" id="qL9-BN-t2K"/>
+                            <constraint firstAttribute="trailing" secondItem="4173" secondAttribute="trailing" constant="91" id="rvg-6o-CjL"/>
+                            <constraint firstItem="4074" firstAttribute="leading" secondItem="3865" secondAttribute="leading" constant="205" id="tUz-xX-Kiu"/>
+                            <constraint firstItem="4058" firstAttribute="leading" secondItem="4159" secondAttribute="trailing" constant="8" symbolic="YES" id="uKu-nc-XNt"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1577,14 +1578,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="132" width="233" height="134"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="4378">
                 <rect key="frame" x="0.0" y="0.0" width="233" height="134"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" title="Updates per 1/60 Second" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="2023">
                         <rect key="frame" x="1" y="1" width="232" height="127"/>
-                        <view key="contentView">
+                        <view key="contentView" id="4nf-lJ-AgE">
                             <rect key="frame" x="1" y="1" width="230" height="111"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -1691,32 +1692,32 @@
                             </subviews>
                         </view>
                         <constraints>
-                            <constraint firstItem="2045" firstAttribute="trailing" secondItem="2046" secondAttribute="trailing" id="2048"/>
-                            <constraint firstItem="2045" firstAttribute="trailing" secondItem="2042" secondAttribute="trailing" id="2049"/>
-                            <constraint firstItem="2043" firstAttribute="centerY" secondItem="2045" secondAttribute="centerY" id="2055"/>
-                            <constraint firstItem="2043" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="46" id="2057"/>
-                            <constraint firstItem="2041" firstAttribute="centerY" secondItem="2042" secondAttribute="centerY" id="2061"/>
-                            <constraint firstItem="2040" firstAttribute="top" secondItem="2042" secondAttribute="bottom" constant="8" symbolic="YES" id="2062"/>
-                            <constraint firstItem="2040" firstAttribute="centerX" secondItem="2023" secondAttribute="centerX" id="3341"/>
-                            <constraint firstItem="2045" firstAttribute="leading" secondItem="2042" secondAttribute="leading" id="3360"/>
-                            <constraint firstItem="2045" firstAttribute="leading" secondItem="2046" secondAttribute="leading" id="3362"/>
-                            <constraint firstItem="2046" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="14" id="3363"/>
-                            <constraint firstItem="2044" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="23" id="3377"/>
-                            <constraint firstItem="3364" firstAttribute="top" secondItem="2044" secondAttribute="top" id="3380"/>
-                            <constraint firstItem="2046" firstAttribute="centerY" secondItem="2044" secondAttribute="centerY" id="3381"/>
-                            <constraint firstItem="3382" firstAttribute="top" secondItem="2043" secondAttribute="top" id="3384"/>
-                            <constraint firstItem="3386" firstAttribute="top" secondItem="2041" secondAttribute="top" id="3388"/>
-                            <constraint firstItem="3386" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="69" id="4475"/>
-                            <constraint firstItem="3382" firstAttribute="leading" secondItem="3364" secondAttribute="leading" id="4837"/>
-                            <constraint firstItem="3386" firstAttribute="leading" secondItem="3382" secondAttribute="leading" id="4842"/>
-                            <constraint firstItem="3364" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="102" id="4844"/>
-                            <constraint firstItem="3382" firstAttribute="trailing" secondItem="3364" secondAttribute="trailing" id="4847"/>
-                            <constraint firstItem="3386" firstAttribute="trailing" secondItem="3382" secondAttribute="trailing" id="4850"/>
-                            <constraint firstItem="2043" firstAttribute="trailing" secondItem="2044" secondAttribute="trailing" id="4930"/>
-                            <constraint firstItem="2043" firstAttribute="leading" secondItem="2044" secondAttribute="leading" id="4932"/>
-                            <constraint firstItem="2041" firstAttribute="leading" secondItem="2043" secondAttribute="leading" id="4935"/>
-                            <constraint firstItem="2041" firstAttribute="trailing" secondItem="2043" secondAttribute="trailing" id="4936"/>
-                            <constraint firstItem="2044" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="43" id="5002"/>
+                            <constraint firstItem="2046" firstAttribute="centerY" secondItem="2044" secondAttribute="centerY" id="34Z-Dr-Af5"/>
+                            <constraint firstItem="2046" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="14" id="54O-yt-GEc"/>
+                            <constraint firstItem="2045" firstAttribute="leading" secondItem="2042" secondAttribute="leading" id="5vv-ML-Gh8"/>
+                            <constraint firstItem="3364" firstAttribute="top" secondItem="2044" secondAttribute="top" id="BJp-cl-udN"/>
+                            <constraint firstItem="2043" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="46" id="Cat-Kv-Me1"/>
+                            <constraint firstItem="3386" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="69" id="D8M-vk-BM5"/>
+                            <constraint firstItem="2041" firstAttribute="trailing" secondItem="2043" secondAttribute="trailing" id="Fa3-qH-Umt"/>
+                            <constraint firstItem="3382" firstAttribute="top" secondItem="2043" secondAttribute="top" id="IQi-g7-ib3"/>
+                            <constraint firstItem="3386" firstAttribute="top" secondItem="2041" secondAttribute="top" id="JcO-KS-fPE"/>
+                            <constraint firstItem="3386" firstAttribute="leading" secondItem="3382" secondAttribute="leading" id="K8p-Gs-paF"/>
+                            <constraint firstItem="3382" firstAttribute="trailing" secondItem="3364" secondAttribute="trailing" id="MYP-mT-qIh"/>
+                            <constraint firstItem="2045" firstAttribute="trailing" secondItem="2046" secondAttribute="trailing" id="NXi-qq-uNH"/>
+                            <constraint firstItem="2043" firstAttribute="trailing" secondItem="2044" secondAttribute="trailing" id="QGo-tr-QcB"/>
+                            <constraint firstItem="3386" firstAttribute="trailing" secondItem="3382" secondAttribute="trailing" id="XSt-mO-VX5"/>
+                            <constraint firstItem="2041" firstAttribute="leading" secondItem="2043" secondAttribute="leading" id="cEr-xd-F7X"/>
+                            <constraint firstItem="3382" firstAttribute="leading" secondItem="3364" secondAttribute="leading" id="d1E-yf-WxW"/>
+                            <constraint firstItem="2044" firstAttribute="top" secondItem="2023" secondAttribute="top" constant="23" id="dFt-Ts-hsJ"/>
+                            <constraint firstItem="2043" firstAttribute="leading" secondItem="2044" secondAttribute="leading" id="eap-Za-UIL"/>
+                            <constraint firstItem="2040" firstAttribute="centerX" secondItem="2023" secondAttribute="centerX" id="f3d-Nn-OJC"/>
+                            <constraint firstItem="2045" firstAttribute="leading" secondItem="2046" secondAttribute="leading" id="fg6-g8-X2D"/>
+                            <constraint firstItem="2041" firstAttribute="centerY" secondItem="2042" secondAttribute="centerY" id="j6O-ar-vK3"/>
+                            <constraint firstItem="2040" firstAttribute="top" secondItem="2042" secondAttribute="bottom" constant="8" symbolic="YES" id="vW7-fa-jtb"/>
+                            <constraint firstItem="2043" firstAttribute="centerY" secondItem="2045" secondAttribute="centerY" id="wPj-ho-1Lv"/>
+                            <constraint firstItem="3364" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="102" id="wWN-Y2-vQO"/>
+                            <constraint firstItem="2045" firstAttribute="trailing" secondItem="2042" secondAttribute="trailing" id="wWw-xt-gKf"/>
+                            <constraint firstItem="2044" firstAttribute="leading" secondItem="2023" secondAttribute="leading" constant="43" id="xtu-wK-j6r"/>
                         </constraints>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1734,7 +1735,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="132" width="280" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="5256">
                 <rect key="frame" x="0.0" y="0.0" width="280" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1821,7 +1822,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES" HUD="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="75" y="104" width="272" height="89"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="4AV-mb-Y7K">
                 <rect key="frame" x="0.0" y="0.0" width="272" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>

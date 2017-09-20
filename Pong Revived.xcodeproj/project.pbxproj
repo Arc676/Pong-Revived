@@ -40,6 +40,9 @@
 		713EB7F418129696002E2B0C /* AI.m in Sources */ = {isa = PBXBuildFile; fileRef = 713EB7F318129696002E2B0C /* AI.m */; };
 		713EB7F7181297A4002E2B0C /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 713EB7F6181297A4002E2B0C /* Ball.m */; };
 		7147F79C182AD8850024E574 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7147F79B182AD8850024E574 /* Entity.m */; };
+		7188C0DE1C420AD5001FE46B /* SuperGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7188C0DD1C420AD5001FE46B /* SuperGame.m */; };
+		7188C0E01C420BA1001FE46B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7188C0DF1C420BA1001FE46B /* UIKit.framework */; };
+		7188C0E11C421168001FE46B /* SuperGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7188C0DD1C420AD5001FE46B /* SuperGame.m */; };
 		718F539F17F8C27E008534E7 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 718F539E17F8C27E008534E7 /* Game.m */; };
 		7196EC08186B1B5100D7423F /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7196EC07186B1B5100D7423F /* Logger.m */; };
 		719A04B61A5296D30081E209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719A04B51A5296D30081E209 /* Images.xcassets */; };
@@ -116,8 +119,11 @@
 		713EB7F6181297A4002E2B0C /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 		7147F79A182AD8850024E574 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		7147F79B182AD8850024E574 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
-		718F539D17F8C27E008534E7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = "Pong Revived/Game.h"; sourceTree = "<group>"; };
-		718F539E17F8C27E008534E7 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = "Pong Revived/Game.m"; sourceTree = "<group>"; };
+		7188C0DC1C420AD5001FE46B /* SuperGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperGame.h; path = "Pong Revived/SuperGame.h"; sourceTree = "<group>"; };
+		7188C0DD1C420AD5001FE46B /* SuperGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperGame.m; path = "Pong Revived/SuperGame.m"; sourceTree = "<group>"; };
+		7188C0DF1C420BA1001FE46B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		718F539D17F8C27E008534E7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		718F539E17F8C27E008534E7 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		7196EC06186B1B5100D7423F /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		7196EC07186B1B5100D7423F /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		719A04B51A5296D30081E209 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7188C0E01C420BA1001FE46B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 		7104D12417E0C5AC00DBDF0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7188C0DF1C420BA1001FE46B /* UIKit.framework */,
 				7104D12517E0C5AC00DBDF0A /* Cocoa.framework */,
 				7104D12717E0C5AC00DBDF0A /* Other Frameworks */,
 			);
@@ -267,8 +275,8 @@
 		7188C0D81C41FA32001FE46B /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				718F539D17F8C27E008534E7 /* Game.h */,
-				718F539E17F8C27E008534E7 /* Game.m */,
+				7188C0DC1C420AD5001FE46B /* SuperGame.h */,
+				7188C0DD1C420AD5001FE46B /* SuperGame.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -313,6 +321,8 @@
 		71AE6A6C1810728500D29938 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				718F539D17F8C27E008534E7 /* Game.h */,
+				718F539E17F8C27E008534E7 /* Game.m */,
 				7124C6611801801F00F9F2ED /* PvPGame.h */,
 				7124C6621801801F00F9F2ED /* PvPGame.m */,
 				7124C667180183D900F9F2ED /* CvCGame.h */,
@@ -517,6 +527,7 @@
 				7124C6661801831000F9F2ED /* PvCGame.m in Sources */,
 				7124C669180183D900F9F2ED /* CvCGame.m in Sources */,
 				713EB7F11812962F002E2B0C /* Player.m in Sources */,
+				7188C0DE1C420AD5001FE46B /* SuperGame.m in Sources */,
 				713EB7F418129696002E2B0C /* AI.m in Sources */,
 				713EB7F7181297A4002E2B0C /* Ball.m in Sources */,
 				7147F79C182AD8850024E574 /* Entity.m in Sources */,
@@ -529,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71195D121C410ED60021FAA6 /* ViewController.swift in Sources */,
+				7188C0E11C421168001FE46B /* SuperGame.m in Sources */,
 				71195D101C410ED60021FAA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

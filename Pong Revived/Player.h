@@ -9,6 +9,18 @@
 #import "Game.h"
 #import "Entity.h"
 
+#ifdef TARGET_OS_IOS
+
+#define HEIGHT 100
+#define START_X 50
+
+#else
+
+#define HEIGHT 100
+#define START_X 50
+
+#endif
+
 @interface Player : Entity
 
 @end

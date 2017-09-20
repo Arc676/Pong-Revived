@@ -11,8 +11,8 @@
 @implementation AI
 
 - (id) init{
-    self.x = 700-50;
-    self.y = 400/2;
+    self.x = MAX_WIDTH-50;
+    self.y = (MAX_HEIGHT - HEIGHT)/2;
     self.side = 1;
     return [super init];
 }
@@ -21,12 +21,12 @@
     if(xmove == 0){
         return;
     }
-    if((xmove > 0 && self.side < 0) || (xmove < 0 && self.side > 0)){
+    if((xmove > 0) != (self.side < 0)){
         self.moving = NO;
         return;
     }
     if(self.y < y){
-        if(self.y >= 300){
+        if(self.y >= MAX_HEIGHT - HEIGHT){
             return;
         }
         self.y++;

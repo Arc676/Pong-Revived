@@ -11,17 +11,17 @@
 @implementation Ball
 
 - (id) init{
-    self.x = 700/2;
-    self.y = 400/2;
+    self.x = MAX_WIDTH/2;
+    self.y = (MAX_HEIGHT - HEIGHT)/2;
     return [super init];
 }
 
-- (void) update:(Game *)game{
+- (void) update:(SuperGame *)game{
 	if(!self.moving){
         [self generateXDirection];
         [self generateYDirection];
-        self.x = 720/2-15;
-        self.y = 400/2-15;
+        self.x = MAX_WIDTH/2;
+        self.y = (MAX_HEIGHT - HEIGHT)/2;
 		self.moving = YES;
 	}
     if(self.x <= 0){
@@ -39,7 +39,7 @@
         if (game.sound3) {
             [[NSSound soundNamed:game.sound3] play];
         }
-	}else if(self.y >= 370){
+	}else if(self.y >= MAX_HEIGHT){
         self.ymove *= -1;
         if (game.sound3) {
             [[NSSound soundNamed:game.sound3] play];

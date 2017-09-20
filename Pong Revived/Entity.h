@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Game;
+@class SuperGame;
+
+#ifdef TARGET_OS_IOS
+
+#define MAX_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define MAX_WIDTH ([UIScreen mainScreen].bounds.size.width)
+
+#else
+
+#define MAX_HEIGHT 400
+
+#endif
 
 @interface Entity : NSObject
 
@@ -19,6 +30,6 @@
 - (void) update:(int)xmove x:(int)x y:(int)y;
 - (void) generateXDirection;
 - (void) generateYDirection;
-- (void) update:(Game*)game;
+- (void) update:(SuperGame*)game;
 
 @end

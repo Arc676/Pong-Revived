@@ -12,7 +12,7 @@
 
 - (void) update:(BOOL)up down:(BOOL)down{}
 - (void) update:(int)xmove x:(int)x y:(int)y{}
-- (void) update:(Game *)game{}
+- (void) update:(SuperGame *)game{}
 - (void) generateXDirection{}
 - (void) generateYDirection{}
 
