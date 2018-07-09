@@ -22,14 +22,14 @@
 #import "Game.h"
 #import "Entity.h"
 
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 
-#define HEIGHT 100
+#define PLAYER_HEIGHT 100
 #define START_X 50
 
 #else
 
-#define HEIGHT 100
+#define PLAYER_HEIGHT 100
 #define START_X 50
 
 #endif

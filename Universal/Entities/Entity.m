@@ -23,10 +23,10 @@
 
 @implementation Entity
 
-- (void) update:(BOOL)up down:(BOOL)down{}
-- (void) update:(int)xmove x:(int)x y:(int)y{}
-- (void) update:(SuperGame *)game{}
-- (void) generateXDirection{}
-- (void) generateYDirection{}
+- (void) update:(BOOL)up down:(BOOL)down {}
+- (void) update:(int)xmove x:(int)x y:(int)y {}
+- (void) update:(SuperGame *)game {}
+- (void) generateXDirection {}
+- (void) generateYDirection {}
 
 @end

@@ -23,29 +23,29 @@
 
 @implementation AI
 
-- (id) init{
-    self.x = MAX_WIDTH-50;
-    self.y = (MAX_HEIGHT - HEIGHT)/2;
+- (id) init {
+    self.x = MAX_WIDTH - 50;
+    self.y = (MAX_HEIGHT - AI_HEIGHT) / 2;
     self.side = 1;
     return [super init];
 }
 
-- (void) update:(int)xmove x:(int)x y:(int)y{
-    if(xmove == 0){
+- (void) update:(int)xmove x:(int)x y:(int)y {
+    if (xmove == 0) {
         return;
     }
-    if((xmove > 0) != (self.side < 0)){
+    if ((xmove > 0) != (self.side < 0)) {
         self.moving = NO;
         return;
     }
-    if(self.y < y){
-        if(self.y >= MAX_HEIGHT - HEIGHT){
+    if (self.y < y) {
+        if (self.y >= MAX_HEIGHT - AI_HEIGHT) {
             return;
         }
         self.y++;
         self.moving = YES;
     }
-    if(self.y > y){
+    if (self.y > y) {
         self.y--;
         self.moving = YES;
     }

@@ -22,7 +22,7 @@
 #import <Foundation/Foundation.h>
 @class SuperGame;
 
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 
 #define MAX_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define MAX_WIDTH ([UIScreen mainScreen].bounds.size.width)
@@ -30,6 +30,7 @@
 #else
 
 #define MAX_HEIGHT 400
+#define MAX_WIDTH 720
 
 #endif
 

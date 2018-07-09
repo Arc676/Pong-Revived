@@ -46,21 +46,21 @@
     return [super init];
 }
 
-- (void) drawRect:(NSRect)rect{
+- (void) drawRect:(NSRect)rect {
     if (self.imageBG) {
         [[NSColor blackColor] set];
         NSRectFill(rect);
         [self.bgImage drawInRect:NSMakeRect(0, 0, 700, 480)];
-    }else {
+    } else {
         [self.bgcolor set];
         NSRectFill(rect);
     }
     [self.netcolor set];
-    for (int i = 0; i < 400-30; i += 60) {
-        NSString *str = [NSString stringWithFormat:@"%d %d %d %d", 720/2-5, i, 10, 50];
+    for (int i = 0; i < 400 - 30; i += 60) {
+        NSString *str = [NSString stringWithFormat:@"%d %d %d %d", 720 / 2 - 5, i, 10, 50];
         if (self.hollow) {
             NSFrameRect(NSRectFromString(str));
-        }else{
+        } else {
             NSRectFill(NSRectFromString(str));
         }
     }
@@ -69,7 +69,7 @@
     NSString *str1 = [NSString stringWithFormat:@"%d %d %d %d", self.entity1.x, self.entity1.y, 30, 100];
     if (self.hollow) {
         NSFrameRect(NSRectFromString(str1));
-    }else{
+    } else {
         NSRectFill(NSRectFromString(str1));
     }
 
@@ -77,25 +77,25 @@
     str1 = [NSString stringWithFormat:@"%d %d %d %d", self.entity2.x, self.entity2.y, 30, 100];
     if (self.hollow) {
         NSFrameRect(NSRectFromString(str1));
-    }else{
+    } else {
         NSRectFill(NSRectFromString(str1));
     }
 
-	if(self.disco){
+	if (self.disco) {
         int r = arc4random_uniform(256), g = arc4random_uniform(256), b = arc4random_uniform(256);
-        NSColor *color = [NSColor colorWithCalibratedRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
+        NSColor *color = [NSColor colorWithCalibratedRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0];
         [color set];
-    }else{
+    } else {
         [self.bcolor set];
     }
     str1 = [NSString stringWithFormat:@"%d %d %d %d", self.ball.x, self.ball.y, 30, 30];
     if (self.hollow) {
         NSFrameRect(NSRectFromString(str1));
-    }else{
+    } else {
         NSRectFill(NSRectFromString(str1));
     }
 
-    if(self.debug){
+    if (self.debug) {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica" size:18], NSFontAttributeName,[NSColor whiteColor], NSForegroundColorAttributeName, nil];
 
         NSString *p1 = [NSString stringWithFormat:@"P1 - x:%d, y:%d", self.entity1.x, self.entity1.y];
@@ -110,134 +110,134 @@
         dirchange = [dirchange substringToIndex:range.location];
         NSString *lastKey = [NSString stringWithFormat:@"Last pressed key:%@", self.lastPressedKey];
 
-        NSAttributedString * currentText=[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", p1, p2, ball, scores, ups, bools1, bools2, dirchange, lastKey] attributes: attributes];
+        NSAttributedString *currentText=[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", p1, p2, ball, scores, ups, bools1, bools2, dirchange, lastKey] attributes: attributes];
         [currentText drawAtPoint:NSMakePoint(50, 60)];
     }
 
-    if(self.score1 == 10){
+    if (self.score1 == 10) {
         NSImage *text = [NSImage imageNamed:@"P1Win.png"];
-        NSRect textrect = NSMakeRect(720-300, 50, 290, 50);
-        NSRect bgrect = NSMakeRect(720-300-10, 50-10, 290+20, 50+20);
+        NSRect textrect = NSMakeRect(720 - 300, 50, 290, 50);
+        NSRect bgrect = NSMakeRect(720 - 300 - 10, 50 - 10, 290 + 20, 50 + 20);
     	[[NSColor blackColor] set];
         NSRectFill(bgrect);
         [text drawInRect:textrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0f];
     }
 
-    if(self.score2 == 10){
+    if (self.score2 == 10) {
         NSImage *text = [NSImage imageNamed:@"P2Win.png"];
-        NSRect textrect = NSMakeRect(720-300, 50, 290, 50);
+        NSRect textrect = NSMakeRect(720 - 300, 50, 290, 50);
         [text drawInRect:textrect fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0f];
     }
 
     int middle = 720 / 2;
     int one_fourth = middle / 2;
 
-    NSRect P1Score = NSMakeRect(middle-one_fourth, 340, 50, 50);
+    NSRect P1Score = NSMakeRect(middle - one_fourth, 340, 50, 50);
     [[self.scores objectAtIndex:self.score1] drawInRect:P1Score fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0f];
 
-    NSRect P2Score = NSMakeRect(middle+one_fourth-50, 340, 50, 50);
+    NSRect P2Score = NSMakeRect(middle + one_fourth - 50, 340, 50, 50);
     [[self.scores objectAtIndex:self.score2] drawInRect:P2Score fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0f];
 
-    if(!self.paused){
-        if(self.score1 < 10 && self.score2 < 10){
+    if (!self.paused) {
+        if (self.score1 < 10 && self.score2 < 10) {
             [self update];
         }
     }
     if (self.enteringCmd) {
         @autoreleasepool {
             [[NSColor whiteColor] set];
-            NSRectFill(NSMakeRect(0, 400-50, 720, 50));
+            NSRectFill(NSMakeRect(0, 400 - 50, 720, 50));
             NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Monaco" size:18], NSFontAttributeName, [NSColor blackColor], NSForegroundColorAttributeName, nil];
             NSAttributedString *str = [[NSAttributedString alloc] initWithString:self.cmdInput attributes:dict];
-            [str drawAtPoint:NSMakePoint(10, 400-40)];
+            [str drawAtPoint:NSMakePoint(10, 400 - 40)];
         }
     }
 }
 
-- (void) resetPlayers{
+- (void) resetPlayers {
     [NSThread sleepForTimeInterval:0.5];
-    [self.entity1 setY:400/2-50];
-    [self.entity2 setY:400/2-50];
-    [self.ball setY:400/2-15];
-    [self.ball setX:720/2-15];
+    [self.entity1 setY:400 / 2 - 50];
+    [self.entity2 setY:400 / 2 - 50];
+    [self.ball setY:400 / 2 - 15];
+    [self.ball setX:720 / 2 - 15];
     [self.log log:@"Reset entity positions"];
 }
 
-- (void) keyUp:(NSEvent *)theEvent{
-    if([theEvent.characters isEqualToString:@"w"]){
+- (void) keyUp:(NSEvent *)theEvent {
+    if ([theEvent.characters isEqualToString:@"w"]) {
         [self setW:NO];
     }
-    if([theEvent.characters isEqualToString:@"s"]){
+    if ([theEvent.characters isEqualToString:@"s"]) {
         [self setS:NO];
     }
-    if(theEvent.keyCode == 126){ //UP pressed
+    if (theEvent.keyCode == 126) { //UP pressed
         [self setUP:NO];
     }
-    if(theEvent.keyCode == 125){ //DOWN pressed
+    if (theEvent.keyCode == 125) { //DOWN pressed
         [self setDOWN:NO];
     }
 }
 
-- (void) keyDown:(NSEvent *)theEvent{
+- (void) keyDown:(NSEvent *)theEvent {
     self.lastPressedKey = theEvent.characters;
     if (self.enteringCmd) {
-        if (theEvent.keyCode == 36){
+        if (theEvent.keyCode == 36) {
             self.enteringCmd = NO;
             self.paused = NO;
             [self exec:self.cmdInput];
             self.cmdInput = [@"" mutableCopy];
-        }else if (theEvent.keyCode == 51) {
+        } else if (theEvent.keyCode == 51) {
             self.cmdInput = [[self.cmdInput substringToIndex:[self.cmdInput length] - 1] mutableCopy];
-        }else {
+        } else {
             [self.cmdInput appendString:[theEvent characters]];
         }
-    }else {
+    } else {
         if ([theEvent.characters isEqualToString:@"]"]) {
             self.paused = NO;
-        }else if([theEvent.characters isEqualToString:@"["]){
+        } else if ([theEvent.characters isEqualToString:@"["]) {
             self.paused = YES;
-        }else if([theEvent.characters isEqualToString:@"\\"]){
+        } else if ([theEvent.characters isEqualToString:@"\\"]) {
             self.debug = !self.debug;
-        }else if([theEvent.characters isEqualToString:@"p"]){
+        } else if ([theEvent.characters isEqualToString:@"p"]) {
             if (!self.cheats) {
                 return;
             }
             self.paused = YES;
             self.enteringCmd = YES;
-        }else if([theEvent.characters isEqualToString:@"w"]){
+        } else if ([theEvent.characters isEqualToString:@"w"]) {
             [self setW:YES];
-        }else if([theEvent.characters isEqualToString:@"s"]){
+        } else if ([theEvent.characters isEqualToString:@"s"]) {
             [self setS:YES];
-        }else if(theEvent.keyCode == 126){ //UP pressed
+        } else if (theEvent.keyCode == 126) { //UP pressed
             [self setUP:YES];
-        }else if(theEvent.keyCode == 125){ //DOWN pressed
+        } else if (theEvent.keyCode == 125) { //DOWN pressed
             [self setDOWN:YES];
-        }else if ([theEvent.characters isEqualToString:@";"]) {
+        } else if ([theEvent.characters isEqualToString:@";"]) {
             [self saveGame];
-        }else if ([theEvent.characters isEqualToString:@"'"]) {
+        } else if ([theEvent.characters isEqualToString:@"'"]) {
             [self loadGame];
         }
     }
 }
 
-- (void) update{
+- (void) update {
 	[self.ball update:self];
-    if (self.bUps > 1){
-        for(int i = 1; i < self.bUps; i++){
+    if (self.bUps > 1) {
+        for(int i = 1; i < self.bUps; i++) {
             [self.ball update:self];
         }
     }
 }
 
-- (void) exec:(NSString *)str{
+- (void) exec:(NSString *)str {
     if ([str isEqualToString:@""]) {
         return;
     }
     if ([str isEqual: @"fastball"]) {
-        if(self.fastball){
+        if (self.fastball) {
             self.bUps -= 10;
             self.fastball = NO;
-        }else{
+        } else {
             self.bUps += 10;
             self.fastball = YES;
         }
@@ -262,11 +262,11 @@
         int change;
     	if ([str hasPrefix:@"rcolor"]) {
             change = 1;
-        }else if ([str hasPrefix:@"lcolor"]){
+        } else if ([str hasPrefix:@"lcolor"]) {
             change = 2;
-        }else if ([str hasPrefix:@"ncolor"]){
+        } else if ([str hasPrefix:@"ncolor"]) {
             change = 3;
-        }else{
+        } else {
             change = 4;
         }
         NSInteger length = [@"rcolor " length];
@@ -279,7 +279,7 @@
         r = [r substringToIndex:i]; //r should be @"%d"
         float R = [r floatValue];
 
-        str = [str substringFromIndex:range.location+1]; //str should now be @"%d %d"
+        str = [str substringFromIndex:range.location + 1]; //str should now be @"%d %d"
 
 		NSString *g = str; //g should be @"%d %d"
 		range = [g rangeOfString:@" "];
@@ -287,10 +287,10 @@
 		g = [g substringToIndex:i1]; //g should be @"%d"
 		float G = [g floatValue];
 
-		str = [str substringFromIndex:range.location+1]; //str should now be @"%d"
+		str = [str substringFromIndex:range.location + 1]; //str should now be @"%d"
 
 		float B = [str floatValue];
-        NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+        NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
         switch (change) {
             case 1:
                 self.rcolor = newcolor;
@@ -310,9 +310,9 @@
             default:
                 break;
         }
-    } else if ([str isEqualToString:@"hollow"]){
+    } else if ([str isEqualToString:@"hollow"]) {
         self.hollow = !self.hollow;
-    } else if ([str isEqualToString:@"help"]){
+    } else if ([str isEqualToString:@"help"]) {
         [self.cmds setIsVisible:YES];
         self.paused = YES;
     } else if ([str hasPrefix:@"dirChange"]) {
@@ -327,7 +327,7 @@
     } else if ([str isEqualToString:@"resetDir"]) {
         [self.ball generateXDirection];
         [self.ball generateYDirection];
-    } else if ([str hasPrefix:@"sound1 "] || [str hasPrefix:@"sound2"] || [str hasPrefix:@"sound3"]){
+    } else if ([str hasPrefix:@"sound1 "] || [str hasPrefix:@"sound2"] || [str hasPrefix:@"sound3"]) {
         NSString *str1 = [[str substringFromIndex:@"sound- ".length] lowercaseString];
         if ([str1 isEqualToString:@"pop"] || [str1 isEqualToString:@"ping"] || [str1 isEqualToString:@"glass"]) {
             NSString* pt1 = [NSString stringWithFormat:@"%c", [str1 characterAtIndex:0]];
@@ -336,16 +336,16 @@
             str1 = [NSString stringWithFormat:@"%@%@", pt1, str1];
             if ([str hasPrefix:@"sound1"]) {
                 self.sound1 = str1;
-            } else if ([str hasPrefix:@"sound2"]){
+            } else if ([str hasPrefix:@"sound2"]) {
                 self.sound2 = str1;
-            } else if ([str hasPrefix:@"sound3"]){
+            } else if ([str hasPrefix:@"sound3"]) {
                 self.sound3 = str1;
             }
         }
     }
 }
 
-- (void) saveGame{
+- (void) saveGame {
     @autoreleasepool {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         [dict setObject:@[@(self.entity1.x),@(self.entity1.y),@(self.entity1.side)] forKey:@"P1"];
@@ -378,7 +378,7 @@
         if (self.bgcolor) {
             [[self.bgcolor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:NULL];
             [dict setObject:@[@(r),@(g),@(b)] forKey:@"ColorBG"];
-        }else {
+        } else {
             [dict setObject:@[ @0 , @0 , @0 ] forKey:@"ColorBG"];
         }
         NSSavePanel *panel = [[NSSavePanel alloc] init];
@@ -393,7 +393,7 @@
     }
 }
 
-- (void) loadGame{
+- (void) loadGame {
     @autoreleasepool {
         NSOpenPanel *panel = [[NSOpenPanel alloc] init];
         [panel setAllowsMultipleSelection:NO];

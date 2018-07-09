@@ -21,13 +21,13 @@
 
 #import "Entity.h"
 
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 
-#define HEIGHT 30
+#define BALL_HEIGHT 30
 
 #else
 
-#define HEIGHT 30
+#define BALL_HEIGHT 30
 
 #endif
 

@@ -26,7 +26,7 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)Notification{
+- (void)applicationDidFinishLaunching:(NSNotification *)Notification {
     [self.log log:@"Launched Pong Revived"];
     [self bgColorMode:nil];
     self.gameWindows = [[NSMutableArray alloc] init];
@@ -41,23 +41,23 @@
     [NSApp terminate:self];
 }
 
-- (IBAction)restoreMenu:(id)sender{
+- (IBAction)restoreMenu:(id)sender {
     [self.window setIsVisible:YES];
     [self.log log:@"Restored main menu"];
 }
 
 - (IBAction)Begin:(id)sender {
 	[self.window setIsVisible:NO];
-	if([self.gameModes selectedCell] == self.PvP){
+	if ([self.gameModes selectedCell] == self.PvP) {
         [self newGame:PvP];
         [self.log log:@"Started new PvP game via main menu"];
-	}else if([self.gameModes selectedCell] == self.PvC){
+	} else if ([self.gameModes selectedCell] == self.PvC) {
         [self newGame:PvC];
         [self.log log:@"Started new PvC game via main menu"];
-	}else if([self.gameModes selectedCell] == self.CvC){
+	} else if ([self.gameModes selectedCell] == self.CvC) {
         [self newGame:CvC];
         [self.log log:@"Started new CvC game via main menu"];
-	}else{
+	} else {
 		NSLog(@"[self.gameModes selectedCell] does not return any of the NSButtonCells declared in AppDelegate.h!");
         [self.log log:@"Error: [self.gameModes selectedCell] does not return any of the NSButtonCells declared in AppDelegate.h"];
 	}
@@ -102,28 +102,28 @@
 
 - (IBAction)randomUps1:(id)sender {
     float ups = arc4random_uniform(5);
-    if(ups == 0.0){
+    if (ups == 0.0) {
         ups = 0;
     }
-    [self.lUps setFloatValue:ups+1];
+    [self.lUps setFloatValue:ups + 1];
     [self.log log:@"Randomized left player update frequency"];
 }
 
 - (IBAction)randomUps2:(id)sender {
     float ups = arc4random_uniform(5);
-    if(ups == 0.0){
+    if (ups == 0.0) {
         ups = 0;
     }
-    [self.rUps setFloatValue:ups+1];
+    [self.rUps setFloatValue:ups + 1];
     [self.log log:@"Randomized right player update frequency"];
 }
 
 - (IBAction)randomUps3:(id)sender {
     float ups = arc4random_uniform(5);
-    if(ups == 0.0){
+    if (ups == 0.0) {
         ups = 0;
     }
-    [self.bUps setFloatValue:ups+1];
+    [self.bUps setFloatValue:ups + 1];
     [self.log log:@"Randomized ball update frequency"];
 }
 
@@ -131,7 +131,7 @@
     int R = arc4random_uniform(256);
     int G = arc4random_uniform(256);
     int B = arc4random_uniform(256);
-    NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+    NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
     [self.bcolor setColor:newcolor];
     [self.log log:@"Randomized ball color"];
 }
@@ -140,7 +140,7 @@
     int R = arc4random_uniform(256);
     int G = arc4random_uniform(256);
     int B = arc4random_uniform(256);
-    NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+    NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
     [self.rcolor setColor:newcolor];
     [self.log log:@"Randomized right player color"];
 }
@@ -149,7 +149,7 @@
     int R = arc4random_uniform(256);
     int G = arc4random_uniform(256);
     int B = arc4random_uniform(256);
-    NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+    NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
     [self.lcolor setColor:newcolor];
     [self.log log:@"Randomized left player color"];
 }
@@ -158,7 +158,7 @@
     int R = arc4random_uniform(256);
     int G = arc4random_uniform(256);
     int B = arc4random_uniform(256);
-    NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+    NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
     [self.netColor setColor:newcolor];
 	[self.log log:@"Randomized net color"];
 }
@@ -183,7 +183,7 @@
         int R = arc4random_uniform(256);
         int G = arc4random_uniform(256);
         int B = arc4random_uniform(256);
-        NSColor *newcolor = [NSColor colorWithCalibratedRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0];
+        NSColor *newcolor = [NSColor colorWithCalibratedRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1.0];
         [self.bgColor setColor:newcolor];
         [self.log log:@"Randomized background color"];
     }
@@ -219,20 +219,20 @@
     [self.log log:@"Started new CvC game"];
 }
 
-- (void) newGame:(GameTypes)type{
+- (void) newGame:(GameTypes)type {
     if ([self.gameWindows count] >= 50) {
         [[NSAlert alertWithMessageText:@"Warning" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"50 games are already open. Please close some using File > Manage Open Games"] runModal];
         return;
     }
     NSSize size = [[NSScreen mainScreen] frame].size;
-    NSRect rect = NSMakeRect(size.width/2 - 720/2, size.height/2 - 400/2, 720, 400);
+    NSRect rect = NSMakeRect(size.width / 2 - 720 / 2, size.height / 2 - 400 / 2, 720, 400);
     NSWindow *gameWindow = [[NSWindow alloc] initWithContentRect:rect styleMask:NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask backing:NSBackingStoreBuffered defer:YES];
     Game *game;
-    if (type == PvP){
+    if (type == PvP) {
         game = [[PvPGame alloc] init];
-    }else if (type == PvC){
+    } else if (type == PvC) {
         game = [[PvCGame alloc] init];
-    }else if (type == CvC){
+    } else if (type == CvC) {
         game = [[CvCGame alloc] init];
     }
 
@@ -254,7 +254,7 @@
     if (self.bgModes.selectedCell == self.bgColorMode) {
         game.imageBG = NO;
         [game setBgcolor:[self.bgColor color]];
-    }else {
+    } else {
         game.imageBG = YES;
         [game setBgImage:[self.bgImage image]];
     }
@@ -280,7 +280,7 @@
     [gameWindow setIsVisible:YES];
     [game setNeedsDisplay:YES];
 
-    [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
+    [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
               target:game
               selector:@selector(setNeedsDisplay:)
               userInfo:nil

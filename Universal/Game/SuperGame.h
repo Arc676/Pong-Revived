@@ -20,11 +20,11 @@
 //See README and LICENSE for more details
 
 #import <Foundation/Foundation.h>
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 #import <UIKit/UIKit.h>
 #endif
 
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 //iOS data types
 #define Rect CGRect
 #define Color UIColor

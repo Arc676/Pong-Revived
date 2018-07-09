@@ -22,13 +22,13 @@
 #import "Ball.h"
 #import "Entity.h"
 
-#ifdef TARGET_OS_IOS
+#ifdef TARGET_IOS
 
-#define HEIGHT 100
+#define AI_HEIGHT 100
 
 #else
 
-#define HEIGHT 100
+#define AI_HEIGHT 100
 
 #endif
 

@@ -24,7 +24,7 @@
 @implementation SuperGame
 
 - (void)drawRect:(Rect)rect {}
-- (void) update{}
-- (void) resetPlayers{}
+- (void) update {}
+- (void) resetPlayers {}
 
 @end

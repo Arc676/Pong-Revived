@@ -23,7 +23,7 @@
 
 @implementation Logger
 
-- (void) log:(NSString *)message{
+- (void) log:(NSString *)message {
     NSString *str = [self string];
     NSDate *date = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];

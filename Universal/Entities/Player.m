@@ -23,19 +23,19 @@
 
 @implementation Player
 
-- (id) init{
+- (id) init {
     self.x = START_X;
-    self.y = (MAX_HEIGHT - HEIGHT)/2;
+    self.y = (MAX_HEIGHT - PLAYER_HEIGHT) / 2;
     self.side = -1;
     return [super init];
 }
 
-- (void) update:(BOOL)up down:(BOOL)down{
+- (void) update:(BOOL)up down:(BOOL)down {
     if (up) {
         if (!down) {
             self.moving = YES;
         }
-        if (self.y <= MAX_HEIGHT - HEIGHT) {
+        if (self.y <= MAX_HEIGHT - PLAYER_HEIGHT) {
             self.y++;
         }
     }

@@ -32,21 +32,21 @@
     return [super init];
 }
 
-- (BOOL) acceptsFirstResponder{
+- (BOOL) acceptsFirstResponder {
     return YES;
 }
 
-- (void) update{
+- (void) update {
     [super update];
     [self.entity1 update:self.ball.xmove x:self.ball.x y:self.ball.y];
     [self.entity2 update:self.ball.xmove x:self.ball.x y:self.ball.y];
-    if(self.lpUps > 1){
-        for(int i = 1; i < self.lpUps; i++){
+    if (self.lpUps > 1) {
+        for(int i = 1; i < self.lpUps; i++) {
             [self.entity1 update:self.ball.xmove x:self.ball.x y:self.ball.y];
         }
     }
-    if(self.rpUps > 1){
-        for(int i = 0; i < self.rpUps; i++){
+    if (self.rpUps > 1) {
+        for(int i = 0; i < self.rpUps; i++) {
             [self.entity2 update:self.ball.xmove x:self.ball.x y:self.ball.y];
         }
     }
