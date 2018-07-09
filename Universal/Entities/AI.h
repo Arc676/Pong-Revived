@@ -9,6 +9,16 @@
 #import "Ball.h"
 #import "Entity.h"
 
+#ifdef TARGET_OS_IOS
+
+#define HEIGHT 100
+
+#else
+
+#define HEIGHT 100
+
+#endif
+
 @interface AI : Entity
 
 @end

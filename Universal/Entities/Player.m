@@ -11,8 +11,8 @@
 @implementation Player
 
 - (id) init{
-    self.x = 50;
-    self.y = 400/2;
+    self.x = START_X;
+    self.y = (MAX_HEIGHT - HEIGHT)/2;
     self.side = -1;
     return [super init];
 }
@@ -22,7 +22,7 @@
         if (!down) {
             self.moving = YES;
         }
-        if (self.y <= 300) {
+        if (self.y <= MAX_HEIGHT - HEIGHT) {
             self.y++;
         }
     }
