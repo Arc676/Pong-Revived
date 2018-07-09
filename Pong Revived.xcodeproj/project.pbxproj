@@ -13,13 +13,14 @@
 		7104D13617E0C5AC00DBDF0A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7104D13417E0C5AC00DBDF0A /* Credits.rtf */; };
 		7104D13917E0C5AC00DBDF0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7104D13817E0C5AC00DBDF0A /* AppDelegate.m */; };
 		7104D13C17E0C5AD00DBDF0A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7104D13A17E0C5AD00DBDF0A /* MainMenu.xib */; };
+		7117A3C620F36581001DC22F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7117A3C520F36581001DC22F /* LICENSE */; };
+		7117A3C820F36585001DC22F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7117A3C720F36585001DC22F /* README.md */; };
+		7117A3CA20F36641001DC22F /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = 7117A3C920F36641001DC22F /* CREDITS */; };
 		71195D101C410ED60021FAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71195D0F1C410ED60021FAA6 /* AppDelegate.swift */; };
 		71195D121C410ED60021FAA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71195D111C410ED60021FAA6 /* ViewController.swift */; };
 		71195D151C410ED60021FAA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71195D131C410ED60021FAA6 /* Main.storyboard */; };
 		71195D171C410ED60021FAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71195D161C410ED60021FAA6 /* Assets.xcassets */; };
 		71195D1A1C410ED60021FAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71195D181C410ED60021FAA6 /* LaunchScreen.storyboard */; };
-		71195D251C410ED60021FAA6 /* Pong_Revived_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71195D241C410ED60021FAA6 /* Pong_Revived_iOSTests.swift */; };
-		71195D301C410ED60021FAA6 /* Pong_Revived_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71195D2F1C410ED60021FAA6 /* Pong_Revived_iOSUITests.swift */; };
 		71195D481C41243C0021FAA6 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 71195D3B1C41243C0021FAA6 /* 0.png */; };
 		71195D491C41243C0021FAA6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71195D3C1C41243C0021FAA6 /* 1.png */; };
 		71195D4A1C41243C0021FAA6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 71195D3D1C41243C0021FAA6 /* 2.png */; };
@@ -48,23 +49,6 @@
 		719A04B61A5296D30081E209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719A04B51A5296D30081E209 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		71195D211C410ED60021FAA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7104D11A17E0C5AC00DBDF0A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71195D0C1C410ED50021FAA6;
-			remoteInfo = "Pong Revived iOS";
-		};
-		71195D2C1C410ED60021FAA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7104D11A17E0C5AC00DBDF0A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71195D0C1C410ED50021FAA6;
-			remoteInfo = "Pong Revived iOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		7104D12217E0C5AC00DBDF0A /* Pong Revived.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pong Revived.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7104D12517E0C5AC00DBDF0A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -79,6 +63,9 @@
 		7104D13717E0C5AC00DBDF0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Other/AppDelegate.h; sourceTree = "<group>"; };
 		7104D13817E0C5AC00DBDF0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
 		7104D13B17E0C5AD00DBDF0A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7117A3C520F36581001DC22F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7117A3C720F36585001DC22F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7117A3C920F36641001DC22F /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		71195D0D1C410ED50021FAA6 /* Pong Revived iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pong Revived iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71195D0F1C410ED60021FAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71195D111C410ED60021FAA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,12 +73,6 @@
 		71195D161C410ED60021FAA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71195D191C410ED60021FAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71195D1B1C410ED60021FAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71195D201C410ED60021FAA6 /* Pong Revived iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pong Revived iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		71195D241C410ED60021FAA6 /* Pong_Revived_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pong_Revived_iOSTests.swift; sourceTree = "<group>"; };
-		71195D261C410ED60021FAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71195D2B1C410ED60021FAA6 /* Pong Revived iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pong Revived iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		71195D2F1C410ED60021FAA6 /* Pong_Revived_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pong_Revived_iOSUITests.swift; sourceTree = "<group>"; };
-		71195D311C410ED60021FAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71195D3B1C41243C0021FAA6 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		71195D3C1C41243C0021FAA6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		71195D3D1C41243C0021FAA6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -146,32 +127,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71195D1D1C410ED60021FAA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71195D281C410ED60021FAA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7104D11917E0C5AC00DBDF0A = {
 			isa = PBXGroup;
 			children = (
+				7117A3C420F36569001DC22F /* Meta */,
 				7188C0D41C41F8BC001FE46B /* Universal */,
 				718C70D31838C6C400DA2CAF /* imgs */,
 				7104D12B17E0C5AC00DBDF0A /* Pong Revived */,
 				71195D0E1C410ED60021FAA6 /* Pong Revived iOS */,
-				71195D231C410ED60021FAA6 /* Pong Revived iOSTests */,
-				71195D2E1C410ED60021FAA6 /* Pong Revived iOSUITests */,
 				7104D12417E0C5AC00DBDF0A /* Frameworks */,
 				7104D12317E0C5AC00DBDF0A /* Products */,
 			);
@@ -182,8 +148,6 @@
 			children = (
 				7104D12217E0C5AC00DBDF0A /* Pong Revived.app */,
 				71195D0D1C410ED50021FAA6 /* Pong Revived iOS.app */,
-				71195D201C410ED60021FAA6 /* Pong Revived iOSTests.xctest */,
-				71195D2B1C410ED60021FAA6 /* Pong Revived iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +196,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7117A3C420F36569001DC22F /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				7117A3C720F36585001DC22F /* README.md */,
+				7117A3C920F36641001DC22F /* CREDITS */,
+				7117A3C520F36581001DC22F /* LICENSE */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
 		71195D0E1C410ED60021FAA6 /* Pong Revived iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,24 +217,6 @@
 				71195D1B1C410ED60021FAA6 /* Info.plist */,
 			);
 			path = "Pong Revived iOS";
-			sourceTree = "<group>";
-		};
-		71195D231C410ED60021FAA6 /* Pong Revived iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				71195D241C410ED60021FAA6 /* Pong_Revived_iOSTests.swift */,
-				71195D261C410ED60021FAA6 /* Info.plist */,
-			);
-			path = "Pong Revived iOSTests";
-			sourceTree = "<group>";
-		};
-		71195D2E1C410ED60021FAA6 /* Pong Revived iOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				71195D2F1C410ED60021FAA6 /* Pong_Revived_iOSUITests.swift */,
-				71195D311C410ED60021FAA6 /* Info.plist */,
-			);
-			path = "Pong Revived iOSUITests";
 			sourceTree = "<group>";
 		};
 		7188C0D41C41F8BC001FE46B /* Universal */ = {
@@ -381,42 +337,6 @@
 			productReference = 71195D0D1C410ED50021FAA6 /* Pong Revived iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		71195D1F1C410ED60021FAA6 /* Pong Revived iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71195D351C410ED60021FAA6 /* Build configuration list for PBXNativeTarget "Pong Revived iOSTests" */;
-			buildPhases = (
-				71195D1C1C410ED60021FAA6 /* Sources */,
-				71195D1D1C410ED60021FAA6 /* Frameworks */,
-				71195D1E1C410ED60021FAA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				71195D221C410ED60021FAA6 /* PBXTargetDependency */,
-			);
-			name = "Pong Revived iOSTests";
-			productName = "Pong Revived iOSTests";
-			productReference = 71195D201C410ED60021FAA6 /* Pong Revived iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		71195D2A1C410ED60021FAA6 /* Pong Revived iOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71195D381C410ED60021FAA6 /* Build configuration list for PBXNativeTarget "Pong Revived iOSUITests" */;
-			buildPhases = (
-				71195D271C410ED60021FAA6 /* Sources */,
-				71195D281C410ED60021FAA6 /* Frameworks */,
-				71195D291C410ED60021FAA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				71195D2D1C410ED60021FAA6 /* PBXTargetDependency */,
-			);
-			name = "Pong Revived iOSUITests";
-			productName = "Pong Revived iOSUITests";
-			productReference = 71195D2B1C410ED60021FAA6 /* Pong Revived iOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -430,16 +350,6 @@
 					71195D0C1C410ED50021FAA6 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = T42F23M422;
-					};
-					71195D1F1C410ED60021FAA6 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VMNQE63MQJ;
-						TestTargetID = 71195D0C1C410ED50021FAA6;
-					};
-					71195D2A1C410ED60021FAA6 = {
-						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VMNQE63MQJ;
-						TestTargetID = 71195D0C1C410ED50021FAA6;
 					};
 				};
 			};
@@ -458,8 +368,6 @@
 			targets = (
 				7104D12117E0C5AC00DBDF0A /* Pong Revived */,
 				71195D0C1C410ED50021FAA6 /* Pong Revived iOS */,
-				71195D1F1C410ED60021FAA6 /* Pong Revived iOSTests */,
-				71195D2A1C410ED60021FAA6 /* Pong Revived iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -475,15 +383,18 @@
 				71195D4F1C41243C0021FAA6 /* 7.png in Resources */,
 				7104D13017E0C5AC00DBDF0A /* InfoPlist.strings in Resources */,
 				71195D521C41243C0021FAA6 /* 10.png in Resources */,
+				7117A3C620F36581001DC22F /* LICENSE in Resources */,
 				71195D481C41243C0021FAA6 /* 0.png in Resources */,
 				71195D4A1C41243C0021FAA6 /* 2.png in Resources */,
 				71195D4B1C41243C0021FAA6 /* 3.png in Resources */,
 				7104D13617E0C5AC00DBDF0A /* Credits.rtf in Resources */,
 				71195D541C41243C0021FAA6 /* P2Win.png in Resources */,
 				71195D511C41243C0021FAA6 /* 9.png in Resources */,
+				7117A3C820F36585001DC22F /* README.md in Resources */,
 				71195D531C41243C0021FAA6 /* P1Win.png in Resources */,
 				71195D501C41243C0021FAA6 /* 8.png in Resources */,
 				71195D491C41243C0021FAA6 /* 1.png in Resources */,
+				7117A3CA20F36641001DC22F /* CREDITS in Resources */,
 				7104D13C17E0C5AD00DBDF0A /* MainMenu.xib in Resources */,
 				719A04B61A5296D30081E209 /* Images.xcassets in Resources */,
 			);
@@ -496,20 +407,6 @@
 				71195D1A1C410ED60021FAA6 /* LaunchScreen.storyboard in Resources */,
 				71195D171C410ED60021FAA6 /* Assets.xcassets in Resources */,
 				71195D151C410ED60021FAA6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71195D1E1C410ED60021FAA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71195D291C410ED60021FAA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,36 +442,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71195D1C1C410ED60021FAA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71195D251C410ED60021FAA6 /* Pong_Revived_iOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71195D271C410ED60021FAA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71195D301C410ED60021FAA6 /* Pong_Revived_iOSUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		71195D221C410ED60021FAA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71195D0C1C410ED50021FAA6 /* Pong Revived iOS */;
-			targetProxy = 71195D211C410ED60021FAA6 /* PBXContainerItemProxy */;
-		};
-		71195D2D1C410ED60021FAA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71195D0C1C410ED50021FAA6 /* Pong Revived iOS */;
-			targetProxy = 71195D2C1C410ED60021FAA6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7104D12E17E0C5AC00DBDF0A /* InfoPlist.strings */ = {
@@ -804,122 +672,6 @@
 			};
 			name = Release;
 		};
-		71195D361C410ED60021FAA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Pong Revived iOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Arc676.Pong-Revived-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pong Revived iOS.app/Pong Revived iOS";
-			};
-			name = Debug;
-		};
-		71195D371C410ED60021FAA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Pong Revived iOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Arc676.Pong-Revived-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pong Revived iOS.app/Pong Revived iOS";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		71195D391C410ED60021FAA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Pong Revived iOSUITests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Arc676.Pong-Revived-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_TARGET_NAME = "Pong Revived iOS";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		71195D3A1C410ED60021FAA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Pong Revived iOSUITests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Arc676.Pong-Revived-iOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TEST_TARGET_NAME = "Pong Revived iOS";
-				USES_XCTRUNNER = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -946,24 +698,6 @@
 			buildConfigurations = (
 				71195D331C410ED60021FAA6 /* Debug */,
 				71195D341C410ED60021FAA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		71195D351C410ED60021FAA6 /* Build configuration list for PBXNativeTarget "Pong Revived iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				71195D361C410ED60021FAA6 /* Debug */,
-				71195D371C410ED60021FAA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		71195D381C410ED60021FAA6 /* Build configuration list for PBXNativeTarget "Pong Revived iOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				71195D391C410ED60021FAA6 /* Debug */,
-				71195D3A1C410ED60021FAA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
